@@ -3,7 +3,6 @@
 /**/Thumbs.db
 /.git/
 /node_modules/
-/.history/
 /.idea/
 /yarn.lock
 /package-lock.json
