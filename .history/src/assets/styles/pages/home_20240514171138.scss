@@ -1,0 +1,27 @@
+.header {
+  &__button {
+    button {
+      width: 204px;
+      height: 48px;
+    }
+  }
+}
+
+.section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  &__border_top {
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+  &__title {
+    max-width: 500px;
+    margin-top: 140px;
+    font-size: 4em;
+    line-height: 1em;
+    text-transform: uppercase;
+    color: $pink;
+  }
+}

@@ -1,0 +1,21 @@
+.header {
+  &__button {
+    button {
+      width: 204px;
+      height: 48px;
+    }
+  }
+}
+
+.section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  &__title {
+    max-width: 200px;
+    margin-top: 140px;
+    font-size: 4em;
+    // line-height: 1em;
+    color: $pink;
+  }
+}

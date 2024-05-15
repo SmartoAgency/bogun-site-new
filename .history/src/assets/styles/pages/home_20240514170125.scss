@@ -1,0 +1,14 @@
+.header {
+  &__button {
+    button {
+      width: 204px;
+      height: 48px;
+    }
+  }
+}
+
+.section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}

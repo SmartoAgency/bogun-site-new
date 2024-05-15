@@ -1,0 +1,240 @@
+.header {
+  &__button {
+    button {
+      width: 204px;
+      height: 48px;
+    }
+  }
+}
+
+.section {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  margin-bottom: 210px;
+  &__title {
+    margin-bottom: 20px;
+    font-size: 4em;
+    line-height: 1em;
+    text-transform: uppercase;
+    color: $pink;
+    span {
+      color: $dark-grey;
+    }
+  }
+}
+
+.section_top {
+  padding-bottom: 100px;
+  &__border_top {
+    position: absolute;
+    left: -$content_padding;
+    right: -$content_padding;
+    height: 1px;
+    background-color: rgba(246, 246, 246, 0.2);
+  }
+  &__text_wrapper {
+    margin-top: 140px;
+    width: 28%;
+  }
+  &__text {
+    max-width: 360px;
+  }
+  &__image {
+    width: 72%;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  &__border_bottom {
+    position: absolute;
+    left: -$content_padding;
+    right: -$content_padding;
+    bottom: 8px;
+    height: 1px;
+    background-color: rgba(246, 246, 246, 0.2);
+  }
+  &__button {
+    position: absolute;
+    bottom: -30px;
+    button {
+      background-color: $background;
+      .arrow {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80px;
+        height: 80px;
+        background-color: $pink;
+      }
+      .text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 208px;
+        height: 80px;
+        background-color: $background;
+      }
+    }
+  }
+}
+
+.section_second {
+  &__image {
+    width: 45%;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  &__text_wrapper {
+    width: 49%;
+  }
+  &__title {
+    max-width: 586px;
+    margin-bottom: 60px;
+  }
+  &__news {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 1fr;
+    gap: 60px 80px;
+  }
+  &__item {
+    svg {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.section_third {
+  align-items: center;
+  .decor {
+    width: 100%;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  &__wrapper_text {
+    width: 45%;
+  }
+  &__title {
+    margin: 60px 0;
+  }
+  &__image {
+    width: 49%;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.section_bottom {
+  &__wrapper_text {
+    width: 41%;
+  }
+  &__text {
+    max-width: 440px;
+    margin-bottom: 24px;
+  }
+  &__social {
+    img {
+      width: 48px;
+      height: 48px;
+    }
+    img:nth-child(1) {
+      margin-right: 16px;
+    }
+  }
+  &__wrapper_form {
+    display: flex;
+    flex-direction: column;
+    width: 49%;
+  }
+  &__title {
+    margin-bottom: 0;
+  }
+  &__note {
+    margin-bottom: 48px;
+  }
+  &__wrapper_info {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-bottom: 48px;
+  }
+  .label {
+    margin-bottom: 20px;
+    font-family: $default-font2;
+    font-size: 28px;
+  }
+  &__info_item {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    input {
+      max-width: 424px;
+      height: 48px;
+      padding: 10px 28px;
+      border: none;
+      outline: none;
+      font-family: $default-font;
+      font-size: 20px;
+      color: #343e47;
+      background-color: $dark-grey;
+    }
+    input::placeholder {
+      font-family: $default-font;
+      font-size: 20px;
+      color: #343e47;
+    }
+  }
+  &__info_item:nth-child(1) {
+    margin-right: 40px;
+  }
+  &__wrapper_checkbox {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    label {
+      display: flex;
+      align-items: center;
+      width: 50%;
+      margin-bottom: 4px;
+      padding-left: 48px;
+    }
+  }
+  &__checkbox {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    padding-left: 48px;
+  }
+  &__checkbox_style {
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    margin-left: -48px;
+    background-color: $dark-grey;
+  }
+  &__checkbox:checked + .section_bottom__checkbox_style::before {
+    content: '';
+    width: 16px;
+    height: 16px;
+    background-color: $pink;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &__checkbox:checked + .section_bottom__label {
+    color: $pink;
+  }
+}
