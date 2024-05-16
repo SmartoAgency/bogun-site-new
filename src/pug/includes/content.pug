@@ -62,14 +62,16 @@
     .section_bottom__wrapper_form 
       .section_bottom__title.section__title ми завжди на зв'язку з вами!
       .section_bottom__note Очікуйте гарних новин від сіті-центру BOGUN 
-      form 
+      form(data-form="bottom-form" autocomplete="off")
         .section_bottom__wrapper_info 
-          .section_bottom__info_item
+          .section_bottom__info_item(data-field-input data-field-name data-status="field--inactive")
             label.label(for="name") Ваше імʼя*
-            input(type="text",id="name",placeholder="Введіть ваше імʼя")
-          .section_bottom__info_item
+            input(type="text",id="name",placeholder="Введіть ваше імʼя",name="name")
+            .input-message(data-input-message)
+          .section_bottom__info_item(data-field-input data-field-phone data-status="field--inactive")
             label.label(for="phone") Ваш телефон*
-            input(type="text",id="phone",placeholder="Введіть ваш телефон")
+            input(type="text",id="phone",placeholder="Введіть ваш телефон",name="phone")
+            .input-message(data-input-message)
         .section_bottom__wrapper_question
           .section_bottom__question.label Яким видом нерухомості цікавитесь?  
           .section_bottom__wrapper_checkbox
@@ -90,7 +92,8 @@
               span.section_bottom__checkbox_style
               span.section_bottom__checkbox_text Апартаменти готельного комплексу    
         .section_bottom__button.button
-          button(type="submit") Надіслати      
+          button(type="submit",data-btn-submit) 
+            span(data-btn-submit-text) Надіслати      
 
         
       

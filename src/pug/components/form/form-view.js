@@ -11,7 +11,7 @@ const renderForm = (form, elements, toast) => {
   switch (form.status) {
     case 'renderErrorValidation':
       elementsParamFn.$btnSubmit.setAttribute('disabled', true);
-      fieldsKey.forEach((key) => {
+      fieldsKey.forEach(key => {
         const field = elementsParamFn.fields[key];
         if (field.valid) {
           field.inputWrapper.showSuccessStyle();
@@ -29,7 +29,7 @@ const renderForm = (form, elements, toast) => {
     case 'renderSuccessValidation':
       elementsParamFn.$btnSubmit.removeAttribute('disabled');
 
-      fieldsKey.forEach((key) => {
+      fieldsKey.forEach(key => {
         const field = elementsParamFn.fields[key];
         field.inputWrapper.showSuccessStyle();
         field.inputWrapper.writeMessage('');
@@ -37,7 +37,7 @@ const renderForm = (form, elements, toast) => {
       break;
 
     case 'loading':
-      fieldsKey.forEach((key) => {
+      fieldsKey.forEach(key => {
         const field = elementsParamFn.fields[key];
         field.inputWrapper.showLoadingStyle();
       });
@@ -49,7 +49,7 @@ const renderForm = (form, elements, toast) => {
 
       break;
     case 'successSand':
-      fieldsKey.forEach((key) => {
+      fieldsKey.forEach(key => {
         const field = elementsParamFn.fields[key];
         field.inputWrapper.showDefaultStyle();
         field.inputWrapper.removeSelectedStyle();
@@ -92,25 +92,21 @@ const renderForm = (form, elements, toast) => {
   }
 };
 
-
 const initView = (state, elementsParamFn) => {
   const toast = new MyToster({
     $wrap: document.querySelector('[data-toast-wrapper]'),
   });
-
-  // window.toast = toast;
+  window.toast = toast;
   const mapping = {
     status: () => renderForm(state, elementsParamFn, toast),
   };
-
-  const watchedState = onChange(state, (path) => {
+  const watchedState = onChange(state, path => {
     if (mapping[path]) {
       mapping[path]();
     }
   });
-
   return watchedState;
 };
 
 export default initView;
-// END
+// END;

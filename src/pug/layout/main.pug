@@ -2,7 +2,7 @@ include ../includes/mixins.pug
 
 block variable
 doctype html
-html(lang="en" data-status="local")
+html(lang="ua" data-status="local")
   head
     meta(charset='utf-8')
     meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0")
@@ -13,10 +13,10 @@ html(lang="en" data-status="local")
     meta(name='format-detection', content='email=no')
     meta(content='notranslate', name='google')
     //- <link rel="apple-touch-icon" sizes="180x180" href="./static/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./static/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./static/favicon-16x16.png">
-    <link rel="mask-icon" href="./static/safari-pinned-tab.svg">
-    <link rel="shortcut icon" href="./static/favicon.ico">
+    //- <link rel="icon" type="image/png" sizes="32x32" href="./static/favicon-32x32.png">
+    //- <link rel="icon" type="image/png" sizes="16x16" href="./static/favicon-16x16.png">
+    //- <link rel="mask-icon" href="./static/safari-pinned-tab.svg">
+    //- <link rel="shortcut icon" href="./static/favicon.ico">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-config" content="./static/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
@@ -24,6 +24,7 @@ html(lang="en" data-status="local")
     block head
 
   body(class= class_page id= id_page)
+    .toast-wrapper(data-toast-wrapper)
     .wrapper
       block header
       block content  
